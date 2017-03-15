@@ -13,8 +13,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ABPBLOG.APPLACTION", "ABPBL
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ABPBLOG.DB", "ABPBLOG.DB", "{CBB9212E-1755-4868-87EE-C8B64D4AAB12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABPBLOG", "ABPBLOG\ABPBLOG.csproj", "{C170C123-88D0-4F1A-A14B-73C5E2107DB4}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C170C123-88D0-4F1A-A14B-73C5E2107DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C170C123-88D0-4F1A-A14B-73C5E2107DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C170C123-88D0-4F1A-A14B-73C5E2107DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C170C123-88D0-4F1A-A14B-73C5E2107DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C170C123-88D0-4F1A-A14B-73C5E2107DB4} = {4FC6A9C8-572E-4961-BB92-469DD7A2CA46}
 	EndGlobalSection
 EndGlobal
