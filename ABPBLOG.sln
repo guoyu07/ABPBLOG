@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABPCommon", "ABPCommon\ABPC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABPBLOGRepository", "ABPBLOGRepository\ABPBLOGRepository.csproj", "{58C9B272-1042-4D93-AE00-B00FE2404694}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ABPBLOG.RESOURE", "ABPBLOG.RESOURE", "{70DEE4AE-14A0-4789-A836-8C53AE04707F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
