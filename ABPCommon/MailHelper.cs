@@ -11,7 +11,14 @@ namespace ABPCommon
 {
     public class MailHelper
     {
-        public static void SendMail(string subject, string content, string recive)
+        public static async void SendMail(string subject, string content, string recive)
+        {
+            await Task.Run(() =>
+            {
+                Infomail(subject, content, recive);
+            });
+        }
+        private static void Infomail(string subject, string content, string recive)
         {
             //实例化邮箱API
             MailMessage message = new MailMessage();
