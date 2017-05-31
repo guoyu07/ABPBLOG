@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IRepository
+namespace ABPLOGDTO
 {
-    public class Class1
+    public class Resultcurd
     {
+        public bool state { get; set; }
+
+        public DateTime date { get; set; }
     }
 }
