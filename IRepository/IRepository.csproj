@@ -40,13 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IBaseRep.cs" />
+    <Compile Include="IBaseResp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ABPLOGDTO\ABPLOGDTO.csproj">
       <Project>{427142C4-43FA-441E-9A01-0C1643C8120B}</Project>
       <Name>ABPLOGDTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABPLOGMODEL\ABPLOGMODEL.csproj">
+      <Project>{7AEA3915-AE94-40B6-B85C-BEAC001A713D}</Project>
+      <Name>ABPLOGMODEL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

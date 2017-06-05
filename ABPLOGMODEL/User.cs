@@ -8,24 +8,20 @@ namespace ABPLOGMODEL
 {
     public class User
     {
-        public int group_id { get; set; }
-        public string user_name { get; set; }
-        public string user_pwd { get; set; }
-        public string user_phone { get; set; }
-        public bool user_sex { get; set; }
-        public string user_qq { get; set; }
-        public string user_email { get; set; }
-        public string user_address { get; set; }
-        public int user_mark { get; set; }
-        public int user_rank_id { get; set; }
-        public string user_last_login_ip { get; set; }
-        public DateTime user_birthday { get; set; }
-        public string user_description { get; set; }
-        public string user_image_url { get; set; }
-        public DateTime user_register_time { get; set; }
-        public bool user_lock { get; set; }
-        public bool user_freeze { get; set; }
-        public string user_power { get; set; }
+        public int UserID { get; set; }
+        public string UserName { get; set; }
+        public string UserPassWord { get; set; }
+        public int UserSex { get; set; }
+        public DateTime UserBirthday { get; set; }
+        public string UserBirthPlace { get; set; }
+        public string UserMailbox { get; set; }
+        public string UserQQ { get; set; }
+        public int UserState { get; set; }
+        public string Question { get; set; }
+        public string Answer { get; set; }
+        public int BlogID { get; set; }
+        public int ImageUserID { get; set; }
+        public int UserTypeID { get; set; }
 
     }
 }

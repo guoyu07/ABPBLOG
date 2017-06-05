@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repository
+namespace ABPLOGMODEL
 {
-    public class Class1
+    public class Page
     {
+        public int PageIndex { get; set; }
+        public int Pagesize { get; set; }
     }
 }
