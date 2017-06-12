@@ -53,8 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExpressionToSql.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseResp.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ABPLOGMODEL\ABPLOGMODEL.csproj">

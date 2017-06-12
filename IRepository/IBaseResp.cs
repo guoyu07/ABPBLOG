@@ -19,7 +19,7 @@ namespace IRepository
         T Get(int id);
         T Get(Expression<Func<T, bool>> fun);
         IEnumerable<T> GetAll();
-        IEnumerable<T> GetList(Expression<Func<T, bool>> where = null, Expression<Func<T, bool>> order = null);
-        Tuple<int, IEnumerable<T>> GetPage(Page page, Expression<Func<T, bool>> where = null, Expression<Func<T, bool>> order = null);
+        IEnumerable<T> GetList(Expression<Func<T, T>> entity,Expression<Func<T, bool>> where = null, Expression<Func<T, bool>> order = null);
+        Tuple<int, IEnumerable<T>> GetPage(Page page, Expression<Func<T, T>> entity, Expression<Func<T, bool>> where = null, Expression<Func<T, bool>> order = null);
     }
 }

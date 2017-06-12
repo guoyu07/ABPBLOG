@@ -15,7 +15,7 @@ namespace Repository
     public class BaseResp<T> : IBaseResp<T> where T : class
     {
         protected IDbConnection Conn { get; set; }
-        private BaseResp()
+        public BaseResp()
         {
             Conn = DapperConnnectionFactory.CreateDbConnection();
         }
@@ -65,14 +65,24 @@ namespace Repository
             return Conn.GetAll<T>();
         }
 
-        public IEnumerable<T> GetList(Expression<Func<T, bool>> where = null, Expression<Func<T, bool>> order = null)
+        public IEnumerable<T> GetList(Expression<Func<T,T>> entity,Expression<Func<T, bool>> where = null, Expression<Func<T, T>> order = null)
         {
-            return null;
+            var expression = new ExpressionToSql();
+            string selectentity=expression.GetSql<T>(entity);
+            string wheresql=expression.GetSql<T>(where);
+            string ordersql=expression.GetSql<T>(order);
+            string sql = selectentity+""+where+" order by "+order;
+            return Conn.Query<T>(sql).ToList();
         }
 
-        public Tuple<int, IEnumerable<T>> GetPage(global::ABPLOGMODEL.Page page, Expression<Func<T, bool>> where = null, Expression<Func<T, bool>> order = null)
+        public Tuple<int, IEnumerable<T>> GetPage(global::ABPLOGMODEL.Page page, Expression<Func<T, T>> entity, Expression<Func<T, bool>> where = null, Expression<Func<T, bool>> order = null)
         {
-            return null;
+            var expression = new ExpressionToSql();
+            string selectentity = expression.GetSql<T>(entity);
+            string wheresql = expression.GetSql<T>(where);
+            string ordersql = expression.GetSql<T>(order);
+            string sql = selectentity + "" + where + " order by " + order+" asc limit "+(page.PageIndex-1)*page.Pagesize+","+page.Pagesize;
+            return new Tuple<int, IEnumerable<T>>( 100,Conn.Query<T>(sql).ToList());
         }
 
         public void Update(T T)
