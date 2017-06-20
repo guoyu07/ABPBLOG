@@ -1,0 +1,72 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <style type="text/css">
+        html, body {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+        }
+
+        #myCanvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        .User_login {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            background-color: #ffffff;
+            width: 20%;
+            height: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 999;
+            box-shadow: 0px 2px 14px 8px #888888;
+        }
+
+        .box_header h1 {
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+    <div class="User_login">
+        <div class="box_header">
+            <h1>时刻</h1>
+            <h3 style="text-align:center;">热爱生活分享点滴</h3>
+        </div>
+        <div class="box_main">
+            <div>
+
+            </div>
+            <div>
+                <ul>
+                    <li><input type="text" class="form-control" id="Email" placeholder="邮箱"></li>
+                    <li><input type="text" class="form-control" id="Password" placeholder="密码"></li>
+                    <li><input type="text" class="form-control" id="exampleInputName2" placeholder="验证码"></li>
+                </ul>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script src="~/Scripts/star.js"></script>
+</body>
+</html>
